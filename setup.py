@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="example-pkg-YOUR-USERNAME-HERE",
+    name="packaging_tutorial",
     version="0.0.1",
     author="Example Author",
     author_email="author@example.com",
