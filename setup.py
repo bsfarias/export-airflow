@@ -1,31 +1,27 @@
-#https://stackoverflow.com/questions/8247605/configuring-so-that-pip-install-can-work-from-github
+import setuptools
 
-from setuptools import setup, find_packages
 
-import version
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
-setup(
-    name='export-airflow',
-    version=version.VERSION,
-
-    description='Export Airflow',
-
-    author='...',
-    author_email='...',
-
-    packages=find_packages(exclude=['venv', 'dist', 'docs', 'tests']),
-    py_modules=['export_airflow', 'export_version'],
-
-    install_requires=[
-        'apache-airflow==1.10.14'
-    ],
+setuptools.setup(
+    name="example-pkg-YOUR-USERNAME-HERE",
+    version="0.0.1",
+    author="Example Author",
+    author_email="author@example.com",
+    description="A small example package",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/pypa/sampleproject",
+    project_urls={
+        "Bug Tracker": "https://github.com/pypa/sampleproject/issues",
+    },
     classifiers=[
-        'Development Status :: 4 - Beta',
-        'Environment :: Console',
-        'Intended Audience :: Developers',
-        'Operating System :: POSIX',
-        'Programming Language :: Python :: 3.6',
-        'Topic :: Software Development :: Libraries',
-        'Topic :: System :: Monitoring'
-    ]
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src"),
+    python_requires=">=3.6",
 )
