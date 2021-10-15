@@ -1,3 +1,4 @@
+#pip3 install git+https://github.com/bsfarias/packaging_tutorial.git
 import setuptools
 
 
@@ -5,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="packaging_tutorial",
+    name="example_package",
     version="0.0.1",
     author="Example Author",
     author_email="author@example.com",
