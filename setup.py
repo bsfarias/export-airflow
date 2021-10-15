@@ -1,3 +1,5 @@
+#https://stackoverflow.com/questions/8247605/configuring-so-that-pip-install-can-work-from-github
+
 from setuptools import setup, find_packages
 
 import version
